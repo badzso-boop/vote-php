@@ -1,0 +1,36 @@
+ADATBÁZIS TERV
+    felhasznalok
+        id
+        name
+        fnev
+        jelszo
+        email
+    kvizek
+        id
+        kerdes
+        valaszok
+        eredmenyek
+        felhasznalok
+
+
+CREATE DATABASE vote DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+
+CREATE TABLE felhasznalok (
+    id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,
+    fnev VARCHAR(255) NOT NULL,
+    jelszo VARCHAR(512) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE votes (
+    id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    kerdes VARCHAR(255),
+    valaszok VARCHAR(512),
+    eredmenyek VARCHAR(512),
+    felhasznalok VARCHAR(512)
+);
+
+
+https://raspberrytips.com/raspberry-pi-file-server/
+https://randomnerdtutorials.com/raspberry-pi-apache-mysql-php-lamp-server/
